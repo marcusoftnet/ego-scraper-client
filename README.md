@@ -5,6 +5,7 @@ The client of the the ego-scraper application (using the review-checker backend)
 
 ## Todo
 1. Serving pages from aws
+1. Pass url from index.html
 
 ## Doing
 1. Style it nicer
