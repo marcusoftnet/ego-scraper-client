@@ -1,7 +1,7 @@
 {
   "name": "ego-scraper-client",
   "version": "1.0.0",
-  "description": "",
+  "description": "A static client for the ego-scraper application",
   "main": "index.js",
   "scripts": {
     "web" : "http-server"
