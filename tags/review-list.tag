@@ -1,6 +1,4 @@
 <review-list>
-  <h1>{ opts.apiUrl }</h1>
-
   <review each={ key in reviewKeys } key={ key }></review>
 
   <script type="javascript">
