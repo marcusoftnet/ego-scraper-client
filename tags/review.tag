@@ -1,12 +1,12 @@
 <review>
-  <div show={loaded} class="panel panel-default col-md-5">
+  <div show={loaded} class="panel panel-default col-lg-4">
     <div class="panel-heading">{review.header}</div>
     <div class="panel-body">
-      <span>{review.body}</span>
+      <a href="{review.link}" class="btn btn-primary" target="_blank">Go there</a>
       <br/>
-      <a href={review.link}>{review.header}</a>
+      <span>{review.body}</span>
     </div>
-  </div> 
+  </div>
 
   <spinner show={!loaded}></spinner>
 
