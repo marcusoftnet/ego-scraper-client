@@ -4,9 +4,12 @@
   "description": "A static client for the ego-scraper application",
   "main": "index.js",
   "scripts": {
-    "web" : "http-server -p 8000 ./"
+    "web": "http-server -p 8000 ./"
   },
   "keywords": [],
   "author": "Marcus Hammarberg <marcusoftnet@gmail.com> (http://www.marcusoft.net)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
 }
