@@ -2,9 +2,17 @@
   <div show={loaded} class="panel panel-default col-lg-4">
     <div class="panel-heading">{review.header}</div>
     <div class="panel-body">
-      <a href="{review.link}" class="btn btn-primary" target="_blank">Go there</a>
+      <span>
+        <table class="table table-striped table-hover ">
+          <tbody>
+            <tr each={ result in review.results }>
+              <td>{ result }</td>
+            </tr>
+          </tbody>
+        </table>
+      </span>
       <br/>
-      <span>{review.body}</span>
+      <a href="{review.link}" class="btn btn-primary" target="_blank">Go there</a>
     </div>
   </div>
 
