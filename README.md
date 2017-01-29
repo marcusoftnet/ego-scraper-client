@@ -11,6 +11,7 @@ The client of the the ego-scraper application (using the review-checker backend)
 * Set up a production build
 
 ## Done
+* Handling multiple results
 * Set up a development commands
 1. Add spiner
 1. Style it nicer
