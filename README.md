@@ -5,11 +5,13 @@ The client of the the ego-scraper application (using the review-checker backend)
 
 ## Todo
 1. Pass url from index.html
-
-## Doing
 1. Serving pages from aws S3
 
+## Doing
+* Set up a production build
+
 ## Done
+* Set up a development commands
 1. Add spiner
 1. Style it nicer
 1. Inital front-end using riot.js
