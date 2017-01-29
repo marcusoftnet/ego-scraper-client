@@ -1,5 +1,5 @@
 <review>
-  <div show={loaded} class="panel panel-default review col-lg-4">
+  <div show={loaded} class="panel panel-default col-lg-4">
     <div class="panel-heading">{review.header}</div>
     <div class="panel-body">
       <span>
