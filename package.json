@@ -9,9 +9,9 @@
     "dev": "npm-run-all --parallel dev:*",
     "dist:clean": "rimraf dist dist.zip",
     "tags:compile": "riot tags dist/tags.js",
-    "dist:copy": "cp -r public dist && cp index.html dist",
+    "dist:copy": "cp -r src dist",
     "dist:zip" : "bestzip dist.zip dist",
-    "build": "npm-run-all tags:compile dist:*"
+    "build": "npm-run-all tags:compile dist:clean dist:copy tags:compile dist:zip"
   },
   "keywords": [],
   "author": "Marcus Hammarberg <marcusoftnet@gmail.com> (http://www.marcusoft.net)",
