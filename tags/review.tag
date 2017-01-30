@@ -1,6 +1,6 @@
 <review>
   <div show={loaded} class="panel panel-default col-lg-4">
-    <div class="panel-heading">{review.header}</div>
+    <div class="panel-heading"><a href="{review.link}" target="_blank">{review.header}</a></div>
     <div class="panel-body">
       <span>
         <table class="table table-striped table-hover ">
@@ -11,8 +11,6 @@
           </tbody>
         </table>
       </span>
-      <br/>
-      <a href="{review.link}" class="btn btn-primary" target="_blank">Go there</a>
     </div>
   </div>
 
