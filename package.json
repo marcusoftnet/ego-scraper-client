@@ -11,7 +11,8 @@
     "tags:compile": "riot tags docs/tags.js",
     "dist:copy": "cp -r src docs",
     "dist:zip" : "bestzip docs.zip docs",
-    "build": "npm-run-all tags:compile dist:clean dist:copy tags:compile dist:zip"
+    "build": "npm-run-all tags:compile dist:clean dist:copy tags:compile dist:zip",
+    "deploy" : "git push"
   },
   "keywords": [],
   "author": "Marcus Hammarberg <marcusoftnet@gmail.com> (http://www.marcusoft.net)",
