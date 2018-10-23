@@ -1,6 +1,8 @@
 <review>
-  <div show={loaded} class="panel panel-default col-lg-4">
-    <div class="panel-heading"><a href="{review.link}" target="_blank">{review.header}</a></div>
+  <!-- <div show={loaded} class="panel panel-default col-lg-4">
+    <div class="panel-heading">
+      <a href="{review.link}" target="_blank">{review.header}</a>
+    </div>
     <div class="panel-body">
       <span>
         <table class="table table-striped table-hover">
@@ -12,7 +14,26 @@
         </table>
       </span>
     </div>
-  </div>
+  </div> -->
+
+  <td>
+    <div class="panel-heading">
+      <a href="{review.link}" target="_blank">{review.header}</a>
+    </div>
+  </td>
+  <td>
+    <div class="panel-body">
+      <span>
+        <table class="table table-striped table-hover">
+          <tbody>
+            <tr each={ result in review.results }>
+              <td>{ result }</td>
+            </tr>
+          </tbody>
+        </table>
+      </span>
+    </div>
+  </td>
 
   <spinner show={!loaded}></spinner>
 
@@ -22,8 +43,8 @@
   var self = this;
 
   $.get(url, function( review ) {
-    self.review = review;
-    self.loaded = true;
-    self.update();
+  self.review = review;
+  self.loaded = true;
+  self.update();
   });
 </review>
