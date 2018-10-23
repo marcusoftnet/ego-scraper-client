@@ -1,4 +1,4 @@
-riot.tag2('review-list', '<review each="{key in reviewKeys}" key="{key}"></review>', '', '', function(opts) {
+riot.tag2('review-list', '<table class="table table-striped table-hover"> <th> <td>Topic</td> <td>Review</td> </th> <review each="{key in reviewKeys}" key="{key}"></review> </table>', '', '', function(opts) {
     var apiUrl = "https://j0f1kw9je5.execute-api.us-east-1.amazonaws.com/latest/";
     var reviewKeys = [];
     var self = this;
@@ -8,7 +8,7 @@ riot.tag2('review-list', '<review each="{key in reviewKeys}" key="{key}"></revie
       self.update();
     });
 });
-riot.tag2('review', '<div show="{loaded}" class="panel panel-default col-lg-4"> <div class="panel-heading"><a href="{review.link}" target="_blank">{review.header}</a></div> <div class="panel-body"> <span> <table class="table table-striped table-hover "> <tbody> <tr each="{result in review.results}"> <td>{result}</td> </tr> </tbody> </table> </span> </div> </div> <spinner show="{!loaded}"></spinner>', '', '', function(opts) {
+riot.tag2('review', '<tr show="{loaded}"> <td> <a href="{review.link}" target="_blank">{review.header}</a> </td> <td> <div class="panel-body"> <span> <table class="table table-striped table-hover "> <tbody> <tr each="{result in review.results}"> <td>{result}</td> </tr> </tbody> </table> </span> </div> </td> </tr> <spinner show="{!loaded}"></spinner>', '', '', function(opts) {
 
   this.loaded = false;
   var apiUrl = "https://j0f1kw9je5.execute-api.us-east-1.amazonaws.com/latest/";
