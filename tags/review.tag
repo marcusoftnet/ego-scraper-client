@@ -18,7 +18,11 @@
     </td>
   </tr>
 
-  <spinner show={!loaded}></spinner>
+  <tr show={!loaded}>
+    <td colspan="2">
+      <spinner></spinner>
+    </td>
+  </tr>
 
   this.loaded = false;
   var apiUrl = "https://j0f1kw9je5.execute-api.us-east-1.amazonaws.com/latest/";
