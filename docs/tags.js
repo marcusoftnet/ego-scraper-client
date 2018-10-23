@@ -1,4 +1,4 @@
-riot.tag2('review-list', '<table class="table table-striped table-hover"> <thead> <th>Topics</th> <th>Review</th> </thead> <tbody> <tr each="{key in reviewKeys}" key="{key}"></tr> </tbody> </table>', '', '', function(opts) {
+riot.tag2('review-list', '<review each="{key in reviewKeys}" key="{key}"></review>', '', '', function(opts) {
     var apiUrl = "https://j0f1kw9je5.execute-api.us-east-1.amazonaws.com/latest/";
     var reviewKeys = [];
     var self = this;
@@ -8,7 +8,7 @@ riot.tag2('review-list', '<table class="table table-striped table-hover"> <thead
       self.update();
     });
 });
-riot.tag2('review', '<td show="{loaded}"> <div class="panel-heading"> <a href="{review.link}" target="_blank">{review.header}</a> </div> </td> <td show="{loaded}"> <div class="panel-body"> <span> <table class="table table-striped table-hover"> <tbody> <tr each="{result in review.results}"> <td>{result}</td> </tr> </tbody> </table> </span> </div> </td> <spinner show="{!loaded}"></spinner>', '', '', function(opts) {
+riot.tag2('review', '<div show="{loaded}" class="panel panel-default col-lg-4"> <div class="panel-heading"> <a href="{review.link}" target="_blank">{review.header}</a> </div> <div class="panel-body"> <span> <table class="table table-striped table-hover"> <tbody> <tr each="{result in review.results}"> <td>{result}</td> </tr> </tbody> </table> </span> </div> </div> <spinner show="{!loaded}"></spinner>', '', '', function(opts) {
 
   this.loaded = false;
   var apiUrl = "https://j0f1kw9je5.execute-api.us-east-1.amazonaws.com/latest/";
@@ -21,5 +21,5 @@ riot.tag2('review', '<td show="{loaded}"> <div class="panel-heading"> <a href="{
     self.update();
   });
 });
-riot.tag2('spinner', '<td colspan="2"> <div class="panel panel-default col-lg-4"> <div class="panel-body"> <i class="fa fa-spinner fa-spin" style="font-size:24px"></i> </div> </div> </td>', '', '', function(opts) {
+riot.tag2('spinner', '<div class="panel panel-default col-lg-4"> <div class="panel-body"> <i class="fa fa-spinner fa-spin" style="font-size:24px"></i> </div> </div>', '', '', function(opts) {
 });

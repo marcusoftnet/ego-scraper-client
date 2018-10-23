@@ -1,14 +1,5 @@
 <review-list>
-  <table class="table table-striped table-hover">
-    <thead>
-      <th>Topics</th>
-      <th>Review</th>
-    </thead>
-    <tbody>
-      <tr each={ key in reviewKeys } key={ key }></tr>
-    </tbody>
-  </table>
-  <!-- <review each={ key in reviewKeys } key={ key }></review> -->
+  <review each={ key in reviewKeys } key={ key }></review>
 
   <script type="javascript">
     var apiUrl = "https://j0f1kw9je5.execute-api.us-east-1.amazonaws.com/latest/";
