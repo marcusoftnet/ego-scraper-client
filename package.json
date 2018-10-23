@@ -10,15 +10,15 @@
     "dist:clean": "rimraf docs docs.zip",
     "tags:compile": "riot tags docs/tags.js",
     "dist:copy": "cp -r src docs",
-    "dist:zip" : "bestzip docs.zip docs",
+    "dist:zip": "bestzip docs.zip docs",
     "build": "npm-run-all tags:compile dist:clean dist:copy tags:compile dist:zip",
-    "deploy" : "git push"
+    "deploy": "git push"
   },
   "keywords": [],
   "author": "Marcus Hammarberg <marcusoftnet@gmail.com> (http://www.marcusoft.net)",
   "license": "MIT",
   "dependencies": {
-    "http-server": "^0.9.0"
+    "http-server": "^0.11.1"
   },
   "devDependencies": {
     "bestzip": "^1.1.3",
