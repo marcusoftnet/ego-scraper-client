@@ -1,28 +1,20 @@
 <review>
-  <tr show={loaded}>
-    <td>
-      <a href="{review.link}" target="_blank">{review.header}</a>
-    </td>
-    <td>
-      <div class="panel-body">
-        <span>
-          <table class="table table-striped table-hover ">
-            <tbody>
-              <tr each={ result in review.results }>
-                <td>{ result }</td>
-              </tr>
-            </tbody>
-          </table>
-        </span>
-      </div>
-    </td>
-  </tr>
+  <div show={loaded} class="panel panel-default col-lg-4">
+    <div class="panel-heading"><a href="{review.link}" target="_blank">{review.header}</a></div>
+    <div class="panel-body">
+      <span>
+        <table class="table table-striped table-hover">
+          <tbody>
+            <tr each={ result in review.results }>
+              <td>{ result }</td>
+            </tr>
+          </tbody>
+        </table>
+      </span>
+    </div>
+  </div>
 
-  <tr show={!loaded}>
-    <td colspan="2">
-      <spinner></spinner>
-    </td>
-  </tr>
+  <spinner show={!loaded}></spinner>
 
   this.loaded = false;
   var apiUrl = "https://j0f1kw9je5.execute-api.us-east-1.amazonaws.com/latest/";
