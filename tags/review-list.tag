@@ -1,7 +1,7 @@
 <review-list>
   <table class="table table-striped table-hover">
     <thead>
-      <th>Topic</th>
+      <th>Topics</th>
       <th>Review</th>
     </thead>
     <tbody>
